@@ -9,6 +9,7 @@ const server = fastify();
 server.register(cookie);
 
 server.addHook("preHandler", logSession);
+
 server.register(transactionsRoutes, {
   prefix: "transactions",
 });
