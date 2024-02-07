@@ -8,14 +8,18 @@
     "dev": "npx tsx watch src/server.ts",
     "create": "npx knex migrate:make -x ts",
     "latest": "npx knex migrate:latest",
-    "rollback": "npx knex migrate:rollback"
+    "rollback": "npx knex migrate:rollback",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/supertest": "^6.0.2",
+    "supertest": "^6.3.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
   },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",

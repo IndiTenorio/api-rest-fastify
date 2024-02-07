@@ -15,9 +15,7 @@ export async function transactionsRoutes(server: FastifyInstance) {
     const transactions = await dbConnection("transactions")
       .select("")
       .where("session_id", sessionId);
-    return {
-      transactions,
-    };
+    return transactions;
   });
 
   server.get("/:id", { preHandler: checkParamsId }, async (request, reply) => {
