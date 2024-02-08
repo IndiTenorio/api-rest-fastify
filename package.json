@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node build/src/server.js",
     "dev": "npx tsx watch src/server.ts",
     "create": "npx knex migrate:make -x ts",
     "latest": "npx knex migrate:latest",
     "rollback": "npx knex migrate:rollback",
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +22,7 @@
     "@types/supertest": "^6.0.2",
     "supertest": "^6.3.4",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   },
@@ -26,6 +31,7 @@
     "dotenv": "^16.4.1",
     "fastify": "^4.26.0",
     "knex": "^3.1.0",
+    "pg": "^8.11.3",
     "sqlite3": "^5.1.7",
     "zod": "^3.22.4"
   }
